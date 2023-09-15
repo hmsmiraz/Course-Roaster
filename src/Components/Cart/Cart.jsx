@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types'
 
-const Cart = props => {
+const Cart = ({ selectItem }) => {
+    const {course_name} = selectItem;
   return (
-    <div>Cart</div>
+    <div>
+        <li>{course_name}</li>
+    </div>
   )
 }
 
-Cart.propTypes = {}
+Cart.propTypes = {
+    selectItem: PropTypes.object,
+}
 
 export default Cart
