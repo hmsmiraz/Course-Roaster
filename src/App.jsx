@@ -1,10 +1,13 @@
 import './App.css'
+import Courses from './Components/Courses/Courses'
+import Header from './Components/Header/Header'
 
 function App() {
 
   return (
     <>
-      <h1 className='font-bold text-4xl'>Course Registration</h1>
+      <Header></Header>
+      <Courses></Courses>
     </>
   )
 }
