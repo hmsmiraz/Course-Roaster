@@ -1,9 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { BsCurrencyDollar, BsFillBookFill } from "react-icons/bs";
 
-const Course = ({ course }) => {
-  const {id, img, course_name, Course_price, course_credit, course_details} =
+const Course = ({ course, handleSelectItem }) => {
+  const {img, course_name, Course_price, course_credit, course_details} =
     course;
   return (
     <div>
@@ -25,7 +24,7 @@ const Course = ({ course }) => {
             <p>Credit:{course_credit}hr</p>
           </div>
           <div className="card-actions">
-            <button className="btn btn-wide btn-primary font-semibold text-lg">Select</button>
+            <button onClick={() => handleSelectItem(course)} className="btn btn-wide btn-primary font-semibold text-lg">Select</button>
           </div>
         </div>
       </div>
@@ -35,6 +34,7 @@ const Course = ({ course }) => {
 
 Course.propTypes = {
   course: PropTypes.object.isRequired,
+  handleSelectItem: PropTypes.func,
 };
 
 export default Course;
