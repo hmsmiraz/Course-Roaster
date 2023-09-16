@@ -19,9 +19,9 @@ const Course = ({ course, handleSelectItem }) => {
           <p>{course_details}</p>
           <div className="flex flex-row items-center justify-center">
             <span className="text-lg"><BsCurrencyDollar /></span>
-            <p className="pr-3 pl-2">Price:{Course_price}</p>
-            <span className="pr-3"><BsFillBookFill /></span>
-            <p>Credit:{course_credit}hr</p>
+            <p className="pr-2 pl-2">Price: {Course_price}</p>
+            <span className="pr-2"><BsFillBookFill /></span>
+            <p>Credit: {course_credit} hr</p>
           </div>
           <div className="card-actions">
             <button onClick={() => handleSelectItem(course)} className="btn btn-wide btn-primary font-semibold text-lg">Select</button>

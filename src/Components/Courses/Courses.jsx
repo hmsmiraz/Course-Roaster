@@ -7,7 +7,7 @@ const Courses = ({ handleSelectItem }) => {
     const[courses, setCourses] = useState([]);
 
     useEffect( ()=>{
-        fetch('course.json')
+        fetch("course.json")
         .then(res=>res.json())
         .then(data=>setCourses(data))
     },[])
