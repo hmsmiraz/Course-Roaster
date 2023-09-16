@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [selectCourses, setSelectCourses] = useState([])
-  const [remainingCreditHr, setRemainingCreditHr] = useState(0);
+  const [remainingCreditHr, setRemainingCreditHr] = useState(20);
   const [totalCreditHr, setTotalCreditHr] = useState(0);
   const [totalPriceOf, setTotalPriceOf] = useState(0);
 
@@ -34,7 +34,7 @@ function App() {
         totalPrice = totalPrice + item.Course_price;
       })
       if(totalCredit > 20){
-          return toast.error("No, You can't add more than 20 Credit Hour", {
+          return toast.error("No, Your Credit Hour limit exceeded", {
           position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
